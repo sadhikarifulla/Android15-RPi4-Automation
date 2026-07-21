@@ -16,6 +16,6 @@ echo "Selecting lunch target..."
 lunch aosp_rpi4-ap4a-userdebug
 
 echo "Starting Android build..."
-m -j8
+m -j4
 
 echo "Build completed successfully."
