@@ -25,15 +25,12 @@ pipeline {
 
     post {
         success {
-            echo '========================================='
-            echo ' Android Build Completed Successfully'
-            echo '========================================='
+            archiveArtifacts artifacts: 'out-jenkins/target/product/rpi4/*.img', fingerprint: true
+            echo 'Android Build Completed Successfully'
         }
 
         failure {
-            echo '========================================='
-            echo ' Android Build Failed'
-            echo '========================================='
+            echo 'Android Build Failed'
         }
 
         always {
