@@ -23,3 +23,6 @@ echo "Starting Android build..."
 m -j4
 
 echo "Build completed successfully."
+
+mkdir -p "$WORKSPACE/artifacts"
+cp "$OUT_DIR"/target/product/rpi4/*.img "$WORKSPACE/artifacts/"

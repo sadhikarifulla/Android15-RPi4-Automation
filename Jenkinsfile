@@ -25,7 +25,7 @@ pipeline {
 
     post {
         success {
-            archiveArtifacts artifacts: 'out-jenkins/target/product/rpi4/*.img', fingerprint: true
+            archiveArtifacts artifacts: 'artifacts/*.img', fingerprint: true
             echo 'Android Build Completed Successfully'
         }
 
